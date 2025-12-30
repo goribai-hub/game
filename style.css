@@ -1,0 +1,97 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:system-ui;
+}
+
+body{
+  background:radial-gradient(circle at top,#0f172a,#000);
+  color:white;
+  text-align:center;
+  overflow:hidden;
+}
+
+h1{
+  margin-top:10px;
+  color:#ff3d3d;
+}
+
+p{opacity:.7}
+
+#score{
+  margin:10px;
+  font-size:18px;
+  color:#22c55e;
+}
+
+#game{
+  width:320px;
+  height:480px;
+  border:2px solid #ff3d3d;
+  margin:10px auto;
+  position:relative;
+  overflow:hidden;
+  border-radius:14px;
+}
+
+/* PLAYER BALL */
+#player{
+  width:40px;
+  height:40px;
+  background:#22c55e;
+  border-radius:50%;
+  position:absolute;
+  bottom:20px;
+  left:140px;
+  box-shadow:0 0 15px #22c55e;
+}
+
+/* ENEMY AIRPLANE */
+.enemy{
+  width:40px;
+  height:60px;
+  position:absolute;
+  top:-60px;
+}
+
+.enemy::before{
+  content:"";
+  position:absolute;
+  left:14px;
+  width:12px;
+  height:60px;
+  background:rgb(255, 0, 0);
+  border-radius:6px;
+}
+
+.enemy::after{
+  content:"";
+  position:absolute;
+  top:22px;
+  left:-14px;
+  width:68px;
+  height:14px;
+  background:red;
+  border-radius:6px;
+}
+
+/* GAME OVER */
+#over{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+#over button{
+  padding:10px 20px;
+  border:none;
+  background:#22c55e;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:10px;
+}
