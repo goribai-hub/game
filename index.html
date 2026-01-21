@@ -1,27 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Air Crash Dodge</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meheraz Profile Information</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+  --bg:#020617;
+  --card:rgba(15,23,42,.75);
+  --accent:#38bdf8;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+body{
+  background: radial-gradient(circle at top,#020617,#000);
+  color:var(--text);
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:60px 20px;
+}
+.profile-img{
+  width:150px;
+  height:150px;
+  border-radius:50%; /* perfect circle */
+  object-fit:cover;
+  border:4px solid #38bdf8; /* simple neon border */
+  box-shadow:0 0 15px #38bdf8; /* subtle glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile-img:hover {
+  transform: scale(1.05);
+}
+header h1{
+  margin-top:15px;
+  font-size:2.4rem;
+  color:var(--accent);
+}
+header p{
+  color:var(--muted);
+}
+
+/* SECTION */
+section{
+  padding:30px 8%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+.card{
+  background:var(--card);
+  backdrop-filter: blur(12px);
+  border-radius:16px;
+  padding:25px;
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
+  transition:.4s;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 35px rgba(56,189,248,.25);
+}
+.card h2{
+  color:var(--accent);
+  margin-bottom:15px;
+}
+.card ul{
+  list-style:none;
+}
+.card ul li{
+  padding:6px 0;
+  color:#cbd5f5;
+}
+
+/* SKILLS (BUTTON STYLE) */
+.skills span{
+  display:inline-block;
+  padding:10px 18px;
+  margin:6px;
+  background:#0f172a;
+  border:1px solid rgba(56,189,248,.35);
+  border-radius:30px;
+  font-size:14px;
+  cursor:pointer;
+  transition:.25s ease;
+  user-select:none;
+}
+.skills span:hover{
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  color:#020617;
+  transform:translateY(-4px) scale(1.05);
+  box-shadow:0 0 25px rgba(56,189,248,.6);
+}
+.skills span:active{
+  transform:scale(.95);
+}
+
+/* TOOLS & SETUP (BUTTON STYLE SAME AS SKILLS) */
+.tools{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.tool{
+  background:#0f172a;
+  border:1px solid rgba(56,189,248,.35);
+  border-radius:30px;
+  padding:10px 16px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+  transition:.25s ease;
+}
+.tool i{
+  color:var(--accent);
+}
+.tool p{
+  font-size:14px;
+}
+.tool:hover{
+  background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+  color:#020617;
+  transform:translateY(-4px) scale(1.05);
+  box-shadow:0 0 25px rgba(56,189,248,.6);
+}
+.tool:hover i{
+  color:#020617;
+}
+.tool:active{
+  transform:scale(.95);
+}
+
+/* CONTACT BUTTONS */
+.contact-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+}
+.contact-buttons a{
+  flex:1;
+  min-width:130px;
+  text-align:center;
+  padding:12px;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+  transition:.4s;
+}
+.contact-buttons i{
+  margin-right:8px;
+}
+.btn-fb{background:linear-gradient(45deg,#1877f2,#38bdf8);}
+.btn-ig{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);}
+.btn-gh{background:linear-gradient(45deg,#1f2933,#64748b);}
+.btn-mail{background:linear-gradient(45deg,#22c55e,#16a34a);}
+.contact-buttons a:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 25px rgba(255,255,255,.25);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  color:#64748b;
+  margin-top:40px;
+  border-top:1px solid #0f172a;
+}
+</style>
 </head>
+
 <body>
 
-<h1>✈️ Air Crash Dodge</h1>
-<p>Touch & move the ball</p>
+<header>
+  <img class="profile-img" src="https://i.postimg.cc/bJR6mtYK/615056907-1169572128305316-9104256207374543949-n.jpg" alt="Meheraz Islam Chisty">
+  <h1>Meheraz Islam Chisty</h1>
+  <p>Noob Web Developer | Dreaming Big 🚀</p>
+</header>
 
-<div id="score">Score: 0</div>
+<section>
 
-<div id="game">
-  <div id="player"></div>
+<div class="card">
+  <h2>👤 Personal Info</h2>
+  <ul>
+    <li><b>Name:</b> Meheraz Islam</li>
+    <li><b>Age:</b> 18+</li>
+    <li><b>Date of Birth:</b> 24 January</li>
+    <li><b>Location:</b> Chattogram, Bangladesh</li>
+    <li><b>Relationship</b> Single❤️</li>
+  </ul>
 </div>
 
-<div id="over">
-  <h2>💥 CRASHED</h2>
-  <p id="scoreText"></p>
-  <button onclick="location.reload()">Restart</button>
+<div class="card">
+  <h2>💻 Skills</h2>
+  <div class="skills">
+    <span>HTML</span>
+    <span>JavaScript (Learning)</span>
+    <span>Node.js</span>
+    <span>MongoDB</span>
+  </div>
 </div>
 
-<script src="script.js"></script>
+<div class="card">
+  <h2>📚 About Me</h2>
+  <p>
+    A passionate beginner developer who loves creating websites,
+    APIs, bots and interactive canvas animations.
+  </p>
+</div>
+
+<div class="card">
+  <h2>🎓 Education</h2>
+  <ul>
+    <li>SSC – 2026</li>
+    <li>Al-Zaber Institute</li>
+    <li>Half Private School</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>🧑‍💼 Experience</h2>
+  <ul>
+    <li>Freelance Web Developer</li>
+    <li>API & Bot Development</li>
+    <li>Canvas Game Projects</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>🏆 Projects</h2>
+  <ul>
+    <li>Portfolio Website</li>
+    <li>Travel Agency Website</li>
+    <li>REST API with MongoDB</li>
+    <li>BOT PROJECT: Prime-GoatBot</li>
+  </ul>
+<a href="https://github.com/ShifuX69/Prime-GoatBot.git"
+   target="_blank"
+   style="text-decoration:none; color:#e5e7eb;">
+  <div class="tool">
+    <i class="fab fa-github"></i>
+    <p>Prime-GoatBot Fork Link</p>
+  </div>
+</a>
+
+</div>
+
+<div class="card">
+  <h2>🌍 Languages</h2>
+  <ul>
+    <li>Bangla – Mother Tongue</li>
+    <li>English – Pari Na Bal 🙂</li>
+  </ul>
+  <div class="tools" style="margin-top:10px">
+  <div class="tool"><i class="fas fa-font"></i><p>বাংলা</p></div>
+  <div class="tool"><i class="fas fa-font"></i><p>English</p></div>
+</div>
+</div>
+
+<div class="card">
+  <h2>⚙️ Tools & Setup</h2>
+  <div class="tools">
+    <div class="tool"><i class="fab fa-windows"></i><p>Windows 10</p></div>
+    <div class="tool"><i class="fas fa-code"></i><p>VS Code</p></div>
+    <div class="tool"><i class="fab fa-github"></i><p>GitHub</p></div>
+    <div class="tool"><i class="fas fa-terminal"></i><p>Node.js</p></div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>🌐 Contact Me</h2>
+  <div class="contact-buttons">
+    <a class="btn-fb" href="https://facebook.com/chisty57" target="_blank">
+      <i class="fab fa-facebook-f"></i> Facebook
+    </a>
+    <a class="btn-ig" href="https://instagram.com/_chisty_57" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a class="btn-gh" href="https://github.com/starboy-aphelionX" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <a class="btn-mail" href="mailto:meherazchisty57@gmail.com">
+      <i class="fas fa-envelope"></i> Email
+    </a>
+  </div>
+</div>
+
+</section>
+
+<footer>
+  © 2026 Meheraz | Crafted with ❤️ & Code
+</footer>
+
+<audio id="bg-music" src="bg-music.mp3" loop></audio>
+
+<script>
+  const music = document.getElementById("bg-music");
+  document.addEventListener("click", () => {
+    music.volume = 0.3; // sound low
+    music.play();
+  }, { once: true });
+</script>
+
 </body>
 </html>
